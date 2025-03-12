@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{PS6_Vincent}
+\author{Jack Vincent}
+\date{March 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In this analysis, we focus on Liverpool's 2021/2022 Premier League season, using data scraped from \textit{fbref.com}. The primary goal of this study is to compare the actual goals scored (\texttt{Goals}) by Liverpool players with their expected goals (\texttt{xG}) to assess how well players performed relative to expectations. We clean and preprocess the data to extract the relevant statistics, then create several visualizations to understand the relationship between \texttt{Goals} and \texttt{xG}, and identify players who over- or under-perform in terms of goal scoring.
+
+\section{Data Cleaning}
+
+The data was initially scraped from the \textit{fbref.com} website and loaded into R. The raw dataset contained several columns, many of which were irrelevant to the analysis. The primary columns of interest for this analysis are \texttt{Goals} and \texttt{xG} (expected goals). To clean the data, I followed these steps:
+
+\begin{itemize}
+  \item Replaced empty values and non-numeric characters in the \texttt{Goals} and \texttt{xG} columns with \texttt{NA}.
+  \item Converted both columns to numeric values, ensuring that any invalid entries were removed.
+  \item Filtered out rows where either \texttt{Goals} or \texttt{xG} had missing values.
+\end{itemize}
+
+\section{Goals vs Expected Goals (xG)}
+
+The first visualization is a scatter plot that compares the actual goals scored (\texttt{Goals}) with the expected goals (\texttt{xG}) for each player. A regression line is added to show the trend between these two variables. The plot helps us visualize the relationship between actual performance and expected performance. 
+
+In general, we expect a positive correlation between the two, indicating that players who score more goals than expected are likely to be high-performing players. The plot also allows us to spot outliers, such as players who consistently outperform or underperform their expected goals.
+
+\section{Difference Between Goals and Expected Goals (xG)}
+
+The second visualization is a bar plot that shows the difference between actual goals scored (\texttt{Goals}) and expected goals (\texttt{xG}) for each player. This difference (\texttt{Goals - xG}) allows us to identify players who consistently overperform or underperform relative to their expected goals. A positive value indicates a player scored more goals than expected, while a negative value suggests the opposite.
+
+This plot helps identify key players who may have had a remarkable season either by outscoring expectations or falling short. 
+
+
+\section{Additional Visualization: Goals vs Expected Goals by Player}
+
+The third visualization is a scatter plot similar to the first, but with a different color scheme to highlight individual players. This allows for a more detailed comparison of how each player performs relative to their expected goals. The plot also helps identify players who may have had exceptional seasons or areas where Liverpool could have performed better.
+
+
+\end{document}
