@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\title{PS7_Vincent}
+\author{Jack Vincent}
+\date{March 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{Analysis of Imputation Methods}
+
+The coefficient $\hat{\beta}_1$ for \texttt{hgc} (highest grade completed) was estimated across four models:
+
+\[
+\begin{array}{|l|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Complete Cases} & \textbf{Mean Imputation} & \textbf{Predicted Imputation} & \textbf{MICE} \\
+\hline
+\hat{\beta}_1 & 0.062 & 0.050 & 0.050 & 0.049 \\
+\hline
+\end{array}
+\]
+
+The true value of $\hat{\beta}_1$ is 0.093. Observations:
+- \textbf{Complete case analysis} gives the largest estimate, closer to the true value.
+- \textbf{Imputation methods} (mean, predicted, and MICE) all give lower estimates, with very similar results (~0.05).
+
+\subsection*{Patterns in Estimates}
+- \textbf{Complete Case} yields the closest estimate to the true value, though with fewer observations (1669).
+- \textbf{Imputation methods} generally understate the effect, with mean and predicted imputation showing the smallest estimates.
+- \textbf{MICE} provides a robust estimate but still underestimates the true effect slightly.
+
+\subsection*{Veracity of Imputation Methods}
+- \textbf{Mean/Predicted Imputation} are biased downward, likely due to oversimplification.
+- \textbf{MICE} is more robust but still slightly biased, suggesting the missing data could be \textit{Missing at Random (MAR)}.
+
+\section*{Project Progress Update}
+
+\subsection*{Data Sources}
+I am using Liverpool FC's performance data from the current and previous seasons, focusing on key metrics like goals, assists, expected goals (xG), and possession. The data is sourced from publicly available sports analytics platforms.
+
+\subsection*{Modeling Approaches}
+I am looking at several modeling techniques, including:
+- Exploratory Data Analysis : to visualize trends and identify patterns.
+- Time Series Analysis : to capture seasonal performance trends.
+- Regression Analysis : to explore relationships between key variables like xG and goals.
+
+\end{document}
