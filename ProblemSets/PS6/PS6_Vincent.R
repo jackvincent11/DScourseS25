@@ -47,7 +47,10 @@ ggplot(liverpool_stats_clean, aes(x = xG, y = Goals)) +
        x = "Expected Goals (xG)",
        y = "Goals Scored") +
   theme_minimal()
+<<<<<<< HEAD
 png("PS6a_Vincent.png", bg = "white")
+=======
+>>>>>>> 2543ed7b9e00dd15357ee8fe0d6b93dfba14af59
 ggsave("PS6a_Vincent.png")
 
 ggplot(liverpool_stats_clean, aes(x = xG, y = Goals)) +
@@ -58,7 +61,10 @@ ggplot(liverpool_stats_clean, aes(x = xG, y = Goals)) +
        y = "Goals Scored") +
   theme_minimal() +
   theme(legend.position = "none")
+<<<<<<< HEAD
 png("PS6b_Vincent.png", bg = "white")
+=======
+>>>>>>> 2543ed7b9e00dd15357ee8fe0d6b93dfba14af59
 ggsave("PS6b_Vincent.png")
 
 liverpool_stats_clean$Goals_minus_xG <- liverpool_stats_clean$Goals - liverpool_stats_clean$xG
@@ -69,5 +75,8 @@ ggplot(liverpool_stats_clean, aes(x = reorder(Player, Goals_minus_xG), y = Goals
        y = "Goals - xG") +
   theme_minimal() +
   coord_flip()
+<<<<<<< HEAD
 png("PS6c_Vincent.png", bg = "white")
+=======
+>>>>>>> 2543ed7b9e00dd15357ee8fe0d6b93dfba14af59
 ggsave("PS6c_Vincent.png")
