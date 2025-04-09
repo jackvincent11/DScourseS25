@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Cross-validation and Regularized Linear Regression Models}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Dimension of Training Data}
+
+
+\textbf{Dimension of the training data:} \\
+The dimension of \texttt{housing\_train} is \( \texttt{nrow(housing\_train)} \times \texttt{ncol(housing\_train)} \). In this case, the number of features is increased due to the creation of polynomial features and interaction terms.
+
+\textbf{Additional Variables Compared to Original Data:} \\
+The original dataset contained fewer columns before adding polynomial and interaction terms. The number of additional X variables is the difference between the number of features in the preprocessed data and the original data. The increased number of features comes from generating 6th degree polynomials and interaction terms for the continuous variables.
+
+\section*{Optimal Lambda for LASSO}
+
+The optimal value of the penalty parameter \( \lambda \) for the LASSO model, estimated by 6-fold cross-validation, is:
+
+\[
+\lambda_{\text{optimal LASSO}} = 0.002645621
+\]
+
+\textbf{In-sample RMSE for LASSO:} \\
+The in-sample RMSE for the LASSO model is:
+
+\[
+\text{RMSE}_{\text{train LASSO}} = 0.1393866
+\]
+
+\textbf{Out-of-sample RMSE for LASSO:} \\
+The out-of-sample RMSE for the LASSO model on the test data is:
+
+\[
+\text{RMSE}_{\text{test LASSO}} = 0.1817879
+\]
+
+\section*{Optimal Lambda for Ridge Regression}
+
+The optimal value of the penalty parameter \( \lambda \) for the ridge regression model, estimated by 6-fold cross-validation, is:
+
+\[
+\lambda_{\text{optimal Ridge}} = 0.03663884
+\]
+
+\textbf{In-sample RMSE for Ridge Regression:} \\
+The in-sample RMSE for the ridge regression model is:
+
+\[
+\text{RMSE}_{\text{train Ridge}} = 0.140459
+\]
+
+\textbf{Out-of-sample RMSE for Ridge Regression:} \\
+The out-of-sample RMSE for the ridge regression model on the test data is:
+
+\[
+\text{RMSE}_{\text{test Ridge}} = 0.1884886
+\]
+
+\section*{Simple Linear Regression on Data with More Columns than Rows}
+
+In general, estimating a simple linear regression model on a dataset that has more columns than rows can lead to problems such as multicollinearity and overfitting. With many features and few observations, the model might struggle to generalize well to new data, leading to high variance and poor predictions.
+
+Based on the results from the LASSO and ridge models, it is clear that regularization techniques are essential when dealing with a dataset where the number of features exceeds the number of observations.
+
+\section*{Out-of-sample RMSE for Ridge Regression}
+
+The out-of-sample RMSE for the ridge regression model on the test data is:
+
+\[
+\text{RMSE}_{\text{test Ridge}} = 0.1884886
+\]
+
+\section*{Elastic Net Model}
+
+The elastic net model, with a mixing parameter \( \alpha = 0.5 \), was estimated using 6-fold cross-validation. The optimal value of \( \lambda \) for the elastic net model is:
+
+\[
+\lambda_{\text{optimal Elastic Net}} = 0.005807131
+\]
+
+\textbf{In-sample RMSE for Elastic Net:} \\
+The in-sample RMSE for the elastic net model is:
+
+\[
+\text{RMSE}_{\text{train Elastic Net}} = 0.1401871
+\]
+
+\textbf{Out-of-sample RMSE for Elastic Net:} \\
+The out-of-sample RMSE for the elastic net model on the test data is:
+
+\[
+\text{RMSE}_{\text{test Elastic Net}} = 0.3897738
+\]
+
+
+\end{document}
