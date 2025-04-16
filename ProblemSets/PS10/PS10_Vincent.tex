@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\title{Problem Set 10}
+\author{Jack Vincent}
+\date{April 15, 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Optimal Tuning Parameters and Model Performance}
+
+
+\subsection{Optimal Hyperparameters}
+
+Table \ref{tab:parameters} shows the optimal hyperparameter values for each algorithm.
+
+\begin{table}[H]
+\centering
+\caption{Optimal Hyperparameters for Each Algorithm}
+\label{tab:parameters}
+\begin{tabular}{ll}
+\toprule
+Model & Optimal Parameters \\
+\midrule
+Logistic Regression & penalty = [value] \\
+Decision Tree & min\_n = [value], tree\_depth = [value], cost\_complexity = [value] \\
+Neural Network & hidden\_units = [value], penalty = [value] \\
+k-NN & neighbors = [value] \\
+SVM & cost = [value], rbf\_sigma = [value] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Note: You should replace [value] with the actual values from your R output.
+
+\subsection{Model Performance Comparison}
+
+Table \ref{tab:accuracy} presents the accuracy of each model on the test dataset.
+
+\begin{table}[H]
+\centering
+\caption{Model Performance Comparison}
+\label{tab:accuracy}
+\begin{tabular}{lc}
+\toprule
+Model & Accuracy \\
+\midrule
+Logistic Regression & [value] \\
+Decision Tree & [value] \\
+Neural Network & [value] \\
+k-NN & [value] \\
+SVM & [value] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Discussion}
+
+Based on the results, [insert discussion comparing the performance of the different algorithms here. Discuss which algorithm performed best and why you think that might be the case. Consider the strengths and weaknesses of each approach for this particular dataset and classification task.]
+
+The logistic regression model provides a simple baseline for classification. It uses a linear decision boundary and regularization through the penalty parameter to prevent overfitting.
+
+The decision tree model creates a hierarchical structure of decisions based on feature values. The optimal tree depth, minimum node size, and cost complexity parameter control the complexity of the tree and help prevent overfitting.
+
+The neural network model with a single hidden layer can capture non-linear relationships in the data. The number of hidden units and the penalty parameter control the complexity of the network.
+
+The k-NN algorithm classifies observations based on the majority class of their nearest neighbors. The optimal number of neighbors balances the bias-variance tradeoff.
+
+The SVM with radial basis function kernel creates a non-linear decision boundary by mapping the data to a higher-dimensional space. The cost parameter controls the penalty for misclassifications, while rbf_sigma determines the width of the Gaussian kernel.
+
+\section{Conclusion}
+
+[Brief conclusion about which algorithm performed best for this classification task and what you learned about the different approaches.]
+
+\end{document}
