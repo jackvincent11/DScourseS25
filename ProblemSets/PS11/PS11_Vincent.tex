@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Econ 5253 - Spring 2025\\Problem Set 11 Rough Draft\\Liverpool FC Performance Analysis}
+\author{Jack Vincent}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This project analyzes the performance of Liverpool FC in the 2023/24 season compared to the 2022/23 season. The goal is to evaluate whether the team has improved or regressed using performance metrics such as:
+\begin{itemize}
+    \item Wins, draws, and losses
+    \item Goals scored and goals conceded
+    \item Expected goals (xG) and expected assists (xA)
+    \item Possession statistics
+    \item Shots, shots on target, and other team-level metrics
+\end{itemize}
+The analysis is relevant given the club's title ambitions and potential managerial transition at the end of the season.
+
+\section{Background}
+Football analytics increasingly relies on advanced metrics like xG and xA to assess team and player performance. Expected goals (xG) quantify the quality of scoring opportunities, while expected assists (xA) reflect pass quality leading to shots. These metrics help evaluate team efficiency and strategy beyond surface-level outcomes like wins or total goals.
+
+Data will be gathered from well-known football analytics sites such as Understat and FBRef\citep{understat, fbref}. Previous literature on expected goals will also inform the analysis\citep{mackenzie2012}.
+
+\section{Data}
+\subsection*{Sources}
+\begin{itemize}
+    \item \textbf{Understat}: match-by-match xG and team stats
+    \item \textbf{FBRef}: seasonal summary statistics including possession and passing metrics
+\end{itemize}
+
+\subsection*{Time Frame}
+\begin{itemize}
+    \item 2022/23 season (baseline)
+    \item 2023/24 season (current)
+\end{itemize}
+
+\subsection*{Metrics Collected}
+\begin{itemize}
+    \item Match outcomes (W-D-L)
+    \item Goals scored/conceded
+    \item xG, xA
+    \item Shots per match, possession %, passing accuracy
+\end{itemize}
+
+\section{Methods}
+\begin{itemize}
+    \item Clean and combine datasets from Understat and FBRef
+    \item Calculate season averages per match for each metric
+    \item Use visualizations (e.g., bar plots, line charts) to compare seasons
+    \item Optional: regress team points or goal difference on xG metrics
+\end{itemize}
+
+\section{Preliminary Results}
+The following table will compare Liverpool's key performance metrics across the two seasons:
+
+\begin{center}
+\begin{tabular}{lcc}
+\textbf{Metric} & \textbf{2022/23} & \textbf{2023/24 (YTD)} \\
+\hline
+Points per match & TBD & TBD \\
+Goals per match & TBD & TBD \\
+xG per match & TBD & TBD \\
+xA per match & TBD & TBD \\
+Possession \% & TBD & TBD \\
+\end{tabular}
+\end{center}
+
+Additional graphs and tables will be included in the final report once data cleaning and analysis are complete.
+
+\section{Next Steps}
+\begin{itemize}
+    \item Finish data scraping and preprocessing
+    \item Generate visualizations for all key metrics
+    \item Write final analysis and interpretation of results
+    \item Explore more advanced modeling if time permits
+\end{itemize}
+
+\bibliographystyle{apa}
+\bibliography{PS11_Vincent}
+
+\end{document}
